@@ -1,0 +1,61 @@
+************To run streamlit***************
+
+----> Open Anaconda proompt or ----------
+      streamlit anaconda prompt
+
+streamlit run "C:\Users\mhtan\Documents\BMCS 2114 machine learning\Dashboard.py"
+
+data_minmax = pd.read_csv('C:/Users/mhtan/Documents/BMCS 2114 machine learning/minmax_sampling (1).csv')
+data_standard = pd.read_csv('C:/Users/mhtan/Documents/BMCS 2114 machine learning/standard_sampling (1).csv')
+
+***********Create virtual environment*************
+
+----> Open Anaconda prompt 
+
+conda create -n myenv python=3.9
+conda activate myenv
+
+***********Choose myenv in streamlit**************
+
+1) ctrl + shift + p
+2) Type select interpreter
+3) Choose myenv-anaconda
+
+-------If using window anaconda prompt
+1) conda activate myenv
+
+***********Install libraries*************
+
+-----> Open Anaconda prompt
+
+conda install -c conda-forge hdbscan
+pip install tensorflow
+conda install streamlit
+conda install seaborn
+conda install matplotlib
+pip install umap
+pip install umap-learn
+
+================================================================================
+*****Important features********
+
+from wei kang
+
+selected_vars = [
+    'count', 'srv_count', 'dst_host_count', 'dst_host_srv_count', 
+    'num_compromised', 'num_root', 'num_file_creations', 'num_shells', 
+    'num_access_files', 'num_outbound_cmds', 'total_bytes', 'serror_rate', 
+    'rerror_rate', 'srv_rerror_rate', 'same_srv_rate', 'diff_srv_rate', 
+    'srv_diff_host_rate', 'dst_host_same_srv_rate', 'dst_host_diff_srv_rate', 
+    'dst_host_same_src_port_rate', 'dst_host_srv_diff_host_rate', 
+    'dst_host_serror_rate', 'dst_host_srv_serror_rate', 
+    'dst_host_rerror_rate', 'dst_host_srv_rerror_rate'
+]
+
+from me
+
+select_vars = [
+	'total_bytes', 'flag_SF', 'diff_srv_rate', 'dst_host_srv_diff_host_rate',
+	'dst_host_count', 'flag_S0', 'flag_RSTR', 'dst_host_same_src_port_rate',
+	'dst_host_diff_srv_rate', 'same_srv_rate', 'count', 'last_flag', 'srv_count'
+]
